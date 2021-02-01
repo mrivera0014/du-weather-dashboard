@@ -1,0 +1,21 @@
+/* .text-center{
+    text-align: center;
+} didnt work */
+
+.navbarMargin {
+    margin-bottom: 10px;
+}
+
+.navText {
+    font-size: 30px;
+}
+
+.row {
+    margin-left: 5px;
+}
+
+.searchBtn {
+color: white;
+background-color: deepskyblue;
+width: 40px;
+}
