@@ -9,6 +9,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Weather</title>
 </head>
@@ -25,25 +26,67 @@
         <div class="col-md-2">
             <form class="d-flex">
                 <input type="search" placeholder="Search for a City" aria-label="Search" id="userInput">
-                <button id="addCity" class="btn search col-md-2 searchBtn"><i class="fas fa-search"></i></button>
+                <button id="search" class="btn search col-md-2 searchBtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
     <!-- started new row contains will display cityButton and city info  -->
     <!-- trying to get cityButtons to display stacked -->
-    <div class="row">
-        <div id="newCity" class="col-md-2"></div>
-        <div class="col-md-8">
-            <h2 class="cityName">city goes here</h2>
-            <p class="temp"></p>
-            <p class="humidity"></p>
-            <p class="wind"></p>
-            <p class="uvIndex"></p>
+    <div class="container">
+        <div class="row">
+            <div id="newCity" class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2 class="cityName">city goes here</h2>
+                <br>
+                <br>
+                <p class="temp"> temp</p>
+                <p class="humidity">humidity</p>
+                <p class="wind">wind</p>
+                <p class="uvIndex">uv</p>
+            </div>
+        </div>
+        <h2>5-Day Forecast:</h2>
+        <div class="row">
+            <div id="day1" class="col-md-2">
+                <h3>Date</h3>
+                <img src="" alt="">
+                <p>temp</p>
+                <p>humidity</p>
+            </div>
+            <div id="day2" class="col-md-2">
+                <h3>Date</h3>
+                <img src="" alt="">
+                <p>temp</p>
+                <p>humidity</p>
+            </div>
+            <div id="day3" class="col-md-2">
+                <h3>Date</h3>
+                <img src="" alt="">
+                <p>temp</p>
+                <p>humidity</p>
+            </div>
+            <div id="day4" class="col-md-2">
+                <h3>Date</h3>
+                <img src="" alt="">
+                <p>temp</p>
+                <p>humidity</p>
+            </div>
+            <div id="day5" class="col-md-2">
+                <h3>Date</h3>
+                <img src="" alt="">
+                <p>temp</p>
+                <p>humidity</p>
+            </div>
+
+
         </div>
     </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./js/logic.js"></script>
 </body>
