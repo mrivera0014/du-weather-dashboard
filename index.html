@@ -21,12 +21,12 @@
             <span class="navbar-brand mb-0 h1 navText">Weather Dashboard</span>
         </div>
     </nav>
-    <!-- Created search bar/ has it's own row  -->
+    <!-- Created search bar/ will add city  -->
     <div class="row">
         <div class="col-md-2">
             <form class="d-flex">
-                <input type="search" placeholder="Search for a City" aria-label="Search" id="userInput">
-                <button id="search" class="btn search col-md-2 searchBtn"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Search for a City" aria-label="Search" id="userInput">
+                <button id="addCity" class="btn search col-md-2 searchBtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
@@ -36,13 +36,13 @@
         <div class="row">
             <div id="newCity" class="col-md-2"></div>
             <div class="col-md-8">
-                <h2 class="cityName">city goes here</h2>
+                <h2 class="cityName">--</h2>
                 <br>
                 <br>
-                <p class="temp"> temp</p>
-                <p class="humidity">humidity</p>
-                <p class="wind">wind</p>
-                <p class="uvIndex">uv</p>
+                <p class="temp">Temperature: --</p>
+                <p class="humidity"> Humidity: --</p>
+                <p class="wind"> Wind Speed: --</p>
+                <p class="uvIndex">UV Index: --</p>
             </div>
         </div>
         <h2>5-Day Forecast:</h2>
