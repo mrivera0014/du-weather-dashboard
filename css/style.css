@@ -12,7 +12,7 @@
 
 .searchBtn {
 color: white;
-background-color: deepskyblue;
+background-color: rgba(0, 68, 255, 0.973);
 width: 40px;
 }
 
@@ -23,12 +23,12 @@ width: 40px;
 }
 
 .col-md-8 {
-    background-color: lightblue;
-    margin-left: 
+    background-color: rgb(0, 68, 255);
+    margin: 5px;
     
 }
 
-.col-md-2 {
+/* .col-md-2 {
     background-color: rgb(11, 165, 216);
     margin: 2px;
-}
+} */
