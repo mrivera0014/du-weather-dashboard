@@ -53,7 +53,7 @@ function searchWeather(city) {
         $(".humidity").text("Humidity: " + response.main.humidity);
         $(".wind").text("Wind Speed: " + response.wind.speed)
         // $(".uvIndex").text("UV Index: " + response.)
-
+        $(".imageIcon").attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
         var temperature = (response.main.temp)
         console.log(response.main.temp)
         // $(".temp").text("Temperature (K) " + response.main.temp);
@@ -73,7 +73,7 @@ function forecast(city) {
         url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial",
         method: "GET", dataType: "json"
     }).then(function (response) {
-        // console.log("forecast", response)
+        console.log("forecast", response)
         // column.empty()
         for (var i = 0; i < response.list.length; i++) {
             if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
