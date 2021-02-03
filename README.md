@@ -10,3 +10,4 @@ The part that consumed me a bit and prevented me from moving on with my code was
 
 I can say though, that I felt much more confident when I started this project. I was able to start and keep building on from what I knew I needed. Even though I was not able to finish my project, I was able to come out with a better understanding of how jQuery works such as, creating tags, adding classes, adding attributes, and a few other things. 
 
+![weather-dashboard-screenshot](assets/weather-dashboard-screenshot.PNG)
