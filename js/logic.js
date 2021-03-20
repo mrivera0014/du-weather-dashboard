@@ -3,7 +3,10 @@ var cities = []
 var APIKey = "deefa433382a6d1f06e77bd7935cf556"
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cities + "&appid=" + APIKey;
 
-
+//created variable that will grab data from local storage
+var searchHistory = localStorage.getItem("searchHistory")
+//search history variable will be cities array
+cities.textContent = searchHistory;
 
 //started eventListener but page keeps refreshing w/ event.preventDefault() 
 $("#addCity").on("click", function (event) {
@@ -15,6 +18,9 @@ $("#addCity").on("click", function (event) {
     cities.push(city)
     console.log(cities)
 
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    console.log("local storage")
+
     addButtons()
     searchWeather(city)
 })
@@ -23,7 +29,8 @@ $("#addCity").on("click", function (event) {
 // function that will create the buttons for the cities array
 function addButtons(event) {
     // event.stopPropagation()
-    // console.log("new cites added")
+    console.log("new cites added")
+    //this method prevents from creating the same button if it has already been created
     $("#newCity").empty()
     for (var i = 0; i < cities.length; i++) {
         // creating button for each element in cities.length array
@@ -74,7 +81,7 @@ function forecast(city) {
         method: "GET", dataType: "json"
     }).then(function (response) {
         console.log("forecast", response)
-        // column.empty()
+        // makeCard.empty();
         for (var i = 0; i < response.list.length; i++) {
             if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
                 var column = $("<div>").addClass("col-md-2")
@@ -94,6 +101,25 @@ function forecast(city) {
     })
 }
 
+// if(localStorage.getItem("cities"))
+function history(event) {
+    event.preventDefault();
+    console.log("in the history function")
+
+    searchHistory = $('#userInput').val();
+    console.log("searchHistory works")
+
+    if (cities.indexOf(searchHistory) === -1) {
+        cities.push(searchHistory)
+
+
+        searchWeather()
+        forecast()
+    } else (addButtons())
+
+
+
+}
 
 
 
@@ -104,5 +130,7 @@ function forecast(city) {
 
 
 
-// $(document).on("click", ".addedCity", searchWeather())
+
+
+$("#addCity").on("click", history);
 addButtons()
